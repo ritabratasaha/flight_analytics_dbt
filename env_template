@@ -1,0 +1,8 @@
+# Copy this file to .env and fill in your Snowflake credentials.
+# dbt Snowflake credentials (passed to dbt commands)
+SNOWFLAKE_ACCOUNT=
+SNOWFLAKE_USER=
+SNOWFLAKE_PASSWORD=
+SNOWFLAKE_ROLE=
+SNOWFLAKE_DATABASE=
+SNOWFLAKE_WAREHOUSE=
