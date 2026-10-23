@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_boarding_passes
+    description: Staged boarding passes data from the flight_info schema (incremental merge by processing_date)
+    columns:
+      - name: ticket_no
+        description: Ticket number
+      - name: flight_id
+        description: Flight identifier
+      - name: seat_no
+        description: Assigned seat number
+      - name: boarding_no
+        description: Boarding sequence number
+      - name: boarding_time
+        description: Boarding time
+      - name: boarding_date
+        description: Date of boarding (derived from boarding_time)
+      - name: _run_id
+        description: Unique identifier for the dbt run (invocation_id)
+      - name: _loaded_at
+        description: Timestamp when the record was loaded

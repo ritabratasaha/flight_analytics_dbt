@@ -1,0 +1,12 @@
+target/
+dbt_packages/
+logs/
+.env
+airflow/.env
+airflow/logs/
+.DS_Store
+*.bak
+.user.yml
+__pycache__/
+*.pyc
+

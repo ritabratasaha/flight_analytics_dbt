@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: flights
+    description: Detailed flight information with boarding pass details
+    columns:
+      - name: flight_id
+        description: Unique flight identifier
+      - name: route_no
+        description: Route number for the flight
+      - name: flight_status
+        description: Current status of the flight
+      - name: scheduled_departure
+        description: Scheduled departure timestamp
+      - name: scheduled_arrival
+        description: Scheduled arrival timestamp
+      - name: actual_departure
+        description: Actual departure timestamp
+      - name: actual_arrival
+        description: Actual arrival timestamp
+      - name: ticket_no
+        description: Ticket number associated with the boarding pass
+      - name: seat_no
+        description: Assigned seat number
+      - name: boarding_no
+        description: Boarding sequence number
+      - name: boarding_time
+        description: Timestamp when passenger boarded
+      - name: flight_distance_type
+        description: Classification of flight distance (short, medium, long)

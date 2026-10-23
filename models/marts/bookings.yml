@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: bookings
+    description: Fact table for bookings with date dimensions
+    columns:
+      - name: book_ref
+        description: Unique booking reference identifier
+      - name: book_date
+        description: Timestamp when the booking was made
+      - name: total_amount
+        description: Total amount of the booking
+      - name: booking_date
+        description: Date of the booking (without time)
+      - name: booking_year
+        description: Year the booking was made
+      - name: booking_month
+        description: Month the booking was made
+      - name: _run_id
+        description: Unique identifier for the dbt run (from stg_bookings)
+      - name: _loaded_at
+        description: Timestamp when the record was loaded (from stg_bookings)

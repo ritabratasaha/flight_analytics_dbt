@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_bookings
+    description: Staged bookings data from the flight_info schema (incremental append by processing_date)
+    columns:
+      - name: book_ref
+        description: Unique booking reference identifier
+      - name: book_date
+        description: Timestamp when the booking was made
+      - name: total_amount
+        description: Total amount of the booking
+      - name: _run_id
+        description: Unique identifier for the dbt run (invocation_id)
+      - name: _loaded_at
+        description: Timestamp when the record was loaded

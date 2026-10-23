@@ -1,0 +1,20 @@
+# Point dbt at this file: export DBT_PROFILES_DIR="$(pwd)"
+# Or merge this profile into ~/.dbt/profiles.yml
+#
+# Snowflake: native Snowflake connection using username/password auth
+
+flight_analytics:
+  target: snowflake
+  outputs:
+    snowflake:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "ACCOUNTADMIN"
+      database: "FLIGHT_ANALYTICS"
+      warehouse: "COMPUTE_WH"
+      schema: "staging"
+      threads: 4
+
+    # supabase:  (previous Postgres/Supabase config, kept for reference; credentials live in local env)

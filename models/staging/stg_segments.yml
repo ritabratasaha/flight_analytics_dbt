@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_segments
+    description: Staged segments data from the flight_info schema
+    columns:
+      - name: ticket_no
+        description: Ticket number
+      - name: flight_id
+        description: Flight identifier
+      - name: fare_conditions
+        description: Fare class conditions
+      - name: price
+        description: Segment price

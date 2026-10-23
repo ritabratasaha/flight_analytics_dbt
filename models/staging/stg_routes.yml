@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_routes
+    description: Staged routes data from the flight_info schema
+    columns:
+      - name: route_no
+        description: Unique route number
+      - name: validity
+        description: Validity period of the route
+      - name: departure_airport
+        description: Departure airport code
+      - name: arrival_airport
+        description: Arrival airport code
+      - name: airplane_code
+        description: Aircraft type code
+      - name: days_of_week
+        description: Days of week the route operates
+      - name: scheduled_time
+        description: Scheduled time for the route
+      - name: duration
+        description: Flight duration

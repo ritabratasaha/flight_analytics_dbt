@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_ticket_snapshot
+    description: Daily ticket snapshot that accumulates ticket data for each processing_date (incremental append)
+    columns:
+      - name: ticket_no
+        description: Unique ticket number
+      - name: book_ref
+        description: Booking reference
+      - name: passenger_id
+        description: Passenger identifier
+      - name: passenger_name
+        description: Passenger name
+      - name: outbound
+        description: Whether this is an outbound ticket
+      - name: book_date
+        description: Timestamp when the booking was made (null if orphan ticket)
+      - name: total_amount
+        description: Total amount of the booking (null if orphan ticket)
+      - name: is_orphan_booking
+        description: Flag indicating if booking has no matching ticket (true/false)
+      - name: snapshot_date
+        description: The processing_date for this snapshot run
+      - name: _run_id
+        description: Unique identifier for the dbt run (invocation_id)
+      - name: _loaded_at
+        description: Timestamp when the record was loaded

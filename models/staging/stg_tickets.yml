@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_tickets
+    description: Staged tickets data from the flight_info schema (incremental merge by processing_date)
+    columns:
+      - name: ticket_no
+        description: Unique ticket number
+      - name: book_ref
+        description: Booking reference
+      - name: passenger_id
+        description: Passenger identifier
+      - name: passenger_name
+        description: Passenger name
+      - name: outbound
+        description: Whether this is an outbound ticket
+      - name: _run_id
+        description: Unique identifier for the dbt run (invocation_id)
+      - name: _loaded_at
+        description: Timestamp when the record was loaded

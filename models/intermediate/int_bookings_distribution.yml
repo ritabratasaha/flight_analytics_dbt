@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_bookings_distribution
+    description: Hourly distribution of booking volume and revenue
+    columns:
+      - name: booking_hour
+        description: Hour of the day (0-23)
+      - name: booking_count
+        description: Number of bookings in that hour
+      - name: total_revenue
+        description: Total revenue from bookings in that hour
+      - name: avg_booking_amount
+        description: Average booking amount in that hour

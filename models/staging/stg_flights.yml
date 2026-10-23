@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_flights
+    description: Staged flights data from the flight_info schema (incremental merge by processing_date)
+    columns:
+      - name: flight_id
+        description: Unique flight identifier
+      - name: route_no
+        description: Route number for the flight
+      - name: status
+        description: Current status of the flight
+      - name: scheduled_departure
+        description: Scheduled departure timestamp
+      - name: scheduled_arrival
+        description: Scheduled arrival timestamp
+      - name: actual_departure
+        description: Actual departure time
+      - name: actual_arrival
+        description: Actual arrival time
+      - name: _run_id
+        description: Unique identifier for the dbt run (invocation_id)
+      - name: _loaded_at
+        description: Timestamp when the record was loaded

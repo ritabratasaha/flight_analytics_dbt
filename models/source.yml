@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: snowflake
+    database: FLIGHT_INFORMATION
+    schema: BOOKINGS
+    tables:
+      - name: bookings
+      - name: flights
+      - name: routes
+      - name: segments
+      - name: tickets
+      - name: boarding_passes

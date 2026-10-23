@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_flight_routes_info
+    description: Intermediate model joining flights with route information including departure and arrival airports
+    columns:
+      - name: flight_id
+        description: Flight identifier
+      - name: route_no
+        description: Route number
+      - name: flight_status
+        description: Current status of the flight
+      - name: departure_airport
+        description: Departure airport code
+      - name: arrival_airport
+        description: Arrival airport code
+      - name: airplane_code
+        description: Aircraft type code
+      - name: duration
+        description: Flight duration
